@@ -955,6 +955,7 @@ public abstract class WheelPicker<V> extends View {
             calendar.setTime(date);
             int maxMinYearDifference = yearPick.maxYear - yearPick.minYear;
             int maxCurrentYearDifference = yearPick.maxYear - calendar.get(Calendar.YEAR);
+            if (maxCurrentYearDifference < 0) maxCurrentYearDifference = 0;
             return maxMinYearDifference - maxCurrentYearDifference;
         }
 
