@@ -62,7 +62,7 @@ public class SingleDateAndTimePicker extends LinearLayout {
     @NonNull
     private final WheelAmPmPicker amPmPicker;
 
-    public List<WheelPicker> pickers = new ArrayList<>();
+    private List<WheelPicker> pickers = new ArrayList<>();
 
     private List<OnDateChangedListener> listeners = new ArrayList<>();
 
@@ -577,6 +577,12 @@ public class SingleDateAndTimePicker extends LinearLayout {
 
         if (displayDaysOfMonth) {
             updateDaysOfMonth(Calendar.getInstance());
+        }
+    }
+
+    public void stopScroll() {
+        for (WheelPicker picker : pickers) {
+            picker.stopScroll();
         }
     }
 
