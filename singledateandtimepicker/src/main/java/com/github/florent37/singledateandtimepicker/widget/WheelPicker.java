@@ -201,6 +201,10 @@ public abstract class WheelPicker<V> extends View {
         setDefault(this.defaultValue);
     }
 
+    public void stopScroll() {
+        scroller.forceFinished(true);
+    }
+
     private void updateVisibleItemCount() {
         if (mVisibleItemCount < 2) {
             throw new ArithmeticException("Wheel's visible item count can not be less than 2!");

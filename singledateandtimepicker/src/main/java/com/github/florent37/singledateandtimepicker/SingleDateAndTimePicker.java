@@ -62,7 +62,7 @@ public class SingleDateAndTimePicker extends LinearLayout {
     @NonNull
     private final WheelAmPmPicker amPmPicker;
 
-    private List<WheelPicker> pickers = new ArrayList<>();
+    public List<WheelPicker> pickers = new ArrayList<>();
 
     private List<OnDateChangedListener> listeners = new ArrayList<>();
 
